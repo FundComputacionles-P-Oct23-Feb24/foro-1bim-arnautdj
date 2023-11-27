@@ -1,0 +1,22 @@
+Inicio
+numero, i [0-n]
+totalNumeros, i [0-n] <--- 0
+numerosPares, i [0-n] <--- 0
+contador, i [0-n]
+cantidad, i [0-n]
+<< "Ingrese la cantidad de números a verificar"
+>> cantidad
+Para (contador <--- 1, contador <= cantidad, 1) haga
+	<< "Ingrese el número: " + contador + ":"
+	>> numero
+	Si numero MOD 2 == 0 entonces
+		<< "El número ingresado es par"
+		numerosPares <--- numerosPares + 1
+	Caso Contrario
+		<< "El número ingresado es impar"
+	Fin Si
+	totalNumeros = totalNumeros + 1
+Fin_Para
+<< "Números ingresados: " + totalNumeros\n"
+<< "De ellos, " + numerosPares + "número(s) son par(es)"
+Fin
